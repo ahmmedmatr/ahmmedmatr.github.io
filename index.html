@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دمي سنار - للتبرع بالدم</title>
+<style>
+*{box-sizing:border-box;font-family:Tahoma,Arial,sans-serif}
+body{margin:0;background:#fff5f5;color:#222}
+input[type=radio]{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+header{background:#c80000;color:#fff;text-align:center;padding:20px 10px}
+header h1{margin:0;font-size:30px}
+header p{margin:5px 0 0;font-size:14px}
+nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;background:#fff;padding:12px;position:sticky;top:0;z-index:20;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+nav label{background:#c80000;color:#fff;padding:12px 14px;border-radius:10px;font-size:15px;font-weight:bold;cursor:pointer}
+#tab-home:checked ~ nav label[for=tab-home]{background:#333}
+#tab-donors:checked ~ nav label[for=tab-donors]{background:#333}
+#tab-request:checked ~ nav label[for=tab-request]{background:#333}
+#tab-types:checked ~ nav label[for=tab-types]{background:#333}
+.page{display:none;padding:15px;max-width:800px;margin:auto}
+#tab-home:checked ~ .pages #page-home{display:block}
+#tab-donors:checked ~ .pages #page-donors{display:block}
+#tab-request:checked ~ .pages #page-request{display:block}
+#tab-types:checked ~ .pages #page-types{display:block}
+.card{background:#fff;border:1px solid #ffe0e0;border-radius:15px;padding:16px;margin:12px 0}
+.card img{width:100%;border-radius:12px;margin-top:10px}
+h2{color:#c80000;text-align:center}
+h3{color:#c80000}
+.hadith{background:#fff8e1;border:1px solid #ffe082;border-radius:15px;padding:16px;text-align:center;line-height:1.9}
+input,select{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:10px;font-size:16px}
+.btn{width:100%;background:#c80000;color:#fff;border:none;padding:14px;border-radius:12px;font-size:17px;font-weight:bold;cursor:pointer;margin-top:10px;display:block;text-align:center;text-decoration:none}
+.btn2{background:#1a7a2e}
+.donor{background:#fff;border-right:5px solid #c80000;border-radius:12px;padding:12px;margin:10px 0}
+.donor a{display:inline-block;background:#1a7a2e;color:#fff;text-decoration:none;padding:8px 14px;border-radius:8px;margin-top:8px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}
+th,td{border:1px solid #eee;padding:10px;text-align:center;font-size:14px}
+th{background:#c80000;color:#fff}
+.small{font-size:13px;color:#666;text-align:center}
+.badge{display:inline-block;background:#ffe0e0;color:#c80000;padding:4px 10px;border-radius:20px;font-size:13px;font-weight:bold}
+.urgent{background:#ffebee;border:1px solid #ffcdd2}
+footer{text-align:center;padding:20px;color:#777;font-size:13px}
+</style>
+</head>
+<body>
+
+<input type="radio" name="tabs" id="tab-home" checked>
+<input type="radio" name="tabs" id="tab-donors">
+<input type="radio" name="tabs" id="tab-request">
+<input type="radio" name="tabs" id="tab-types">
+
+<header>
+<h1>🩸 دمي سنار</h1>
+<p>قطرة من دمك .. حياة لغيرك</p>
+</header>
+
+<nav>
+<label for="tab-home">الرئيسية</label>
+<label for="tab-donors">سجل كمتبرع</label>
+<label for="tab-request">اطلب دم</label>
+<label for="tab-types">فصائل الدم</label>
+</nav>
+
+<div class="pages">
+
+<div id="page-home" class="page">
+<div class="hadith">
+<b>قال رسول الله ﷺ</b><br>
+"من نفّس عن مؤمن كربة من كرب الدنيا، نفّس الله عنه كربة من كرب يوم القيامة"<br>
+<span class="small">رواه مسلم</span><br><br>
+<b>وقال تعالى:</b><br>
+"وَمَنْ أَحْيَاهَا فَكَأَنَّمَا أَحْيَا النَّاسَ جَمِيعًا"
+</div>
+<div class="card">
+<h2>دمك ممكن ينقذ شخص اليوم و كل قطرة حياة</h2>
+<p style="line-height:1.9;text-align:center">في سنار في كل يوم في مريض محتاج دم، في أم بتنزف، في طفل عندو أنيميا، في زول عامل عملية ومستني متبرع.<br><br><b>انت ما حتتبرع بدم ساي، انت حتفك كربة زول.</b></p>
+<img src="https://samasudan.net/wp-content/uploads/2024/02/563360_pqZJv2TWp7_zHX3-31-rJ30Yfoya0GDq-780x470.jpg">
+<p class="small">مستشفى سنار التعليمي - مركز التبرع بالدم</p>
+<img src="https://district5030.org/wp-content/uploads/2026/08/blood.avif">
+<p class="small">مركز الدم - تبرعك اليوم حياة لغيرك بكرة</p>
+<label for="tab-donors" class="btn">سجل كمتبرع الآن ❤️</label>
+<label for="tab-request" class="btn btn2">محتاج دم؟ اطلب الآن</label>
+</div>
+<div class="card">
+<h3>ليه تتبرع؟</h3>
+<p>✅ صدقة جارية وأجر عظيم<br>✅ بتجدد دمك وبتنشط جسمك<br>✅ بتساعد أهلك وناس سنار وقت الحوجة<br>✅ تبرع واحد ممكن ينقذ 3 أشخاص</p>
+</div>
+</div>
+
+<div id="page-donors" class="page">
+<h2>سجل كمتبرع</h2>
+<p style="text-align:center">املا بياناتك، ووقت ما زول يحتاج فصيلتك حيلقاك طوالي</p>
+<div class="card">
+<label>الاسم الكامل</label>
+<input id="dName" placeholder="مثال: محمد أحمد">
+<label>مكان السكن في سنار</label>
+<input id="dPlace" placeholder="مثال: سنار - حي القلعة">
+<label>نوع الفصيلة</label>
+<select id="dBlood"><option>O+</option><option>O-</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option></select>
+<label>رقم الهاتف - واتساب</label>
+<input id="dPhone" type="tel" placeholder="09xxxxxxxx">
+<button class="btn" id="saveDonorBtn" type="button">حفظ بياناتي كمتبرع ❤️</button>
+<p id="donorMsg" style="text-align:center;color:green;font-weight:bold"></p>
+</div>
+<div class="card">
+<h3>المتبرعين المسجلين: <span id="donorCount">0</span></h3>
+<div id="donorList"></div>
+</div>
+</div>
+
+<div id="page-request" class="page">
+<h2>اطلب دم</h2>
+<p style="text-align:center">دخل الفصيلة المحتاجها، وحنوريك المتبرعين القريبين منك</p>
+<div class="card">
+<label>نوع الفصيلة المطلوبة</label>
+<select id="rBlood"><option>O+</option><option>O-</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option></select>
+<label>نوع الحالة</label>
+<select id="rUrgent"><option value="مستعجلة جدا">مستعجلة جدا - محتاج اليوم</option><option value="مستعجلة">مستعجلة - خلال يومين</option><option value="عادية">عادية - ممكن تنتظر</option></select>
+<label>محتاج الدم في ياتو يوم؟</label>
+<input id="rDate" type="date">
+<label>اسم المريض / المستشفى (اختياري)</label>
+<input id="rNote" placeholder="مثال: مستشفى سنار التعليمي">
+<button class="btn" id="findBtn" type="button">ابحث عن متبرعين 🔍</button>
+</div>
+<div id="requestResult"></div>
+</div>
+
+<div id="page-types" class="page">
+<h2>فصائل الدم - منو بيدي منو؟</h2>
+<div class="card">
+<img src="https://static.mothership.sg/1/2019/12/Compatibilite-ang-768x512.jpg">
+<p style="line-height:1.9">لازم تعرف فصيلتك قبل ما تتبرع أو تستقبل دم.</p>
+<table>
+<tr><th>فصيلتك</th><th>بتدي لي منو؟</th><th>بتشيل من منو؟</th></tr>
+<tr><td><b>O-</b></td><td>الكل - معطي عام</td><td>O- فقط</td></tr>
+<tr><td><b>O+</b></td><td>O+ , A+ , B+ , AB+</td><td>O+ , O-</td></tr>
+<tr><td><b>A-</b></td><td>A- , A+ , AB- , AB+</td><td>A- , O-</td></tr>
+<tr><td><b>A+</b></td><td>A+ , AB+</td><td>A+ , A- , O+ , O-</td></tr>
+<tr><td><b>B-</b></td><td>B- , B+ , AB- , AB+</td><td>B- , O-</td></tr>
+<tr><td><b>B+</b></td><td>B+ , AB+</td><td>B+ , B- , O+ , O-</td></tr>
+<tr><td><b>AB-</b></td><td>AB- , AB+</td><td>AB- , A- , B- , O-</td></tr>
+<tr><td><b>AB+</b></td><td>AB+ فقط</td><td>الكل - مستقبل عام</td></tr>
+</table>
+</div>
+<div class="card urgent">
+<h3>🚨 أندر الفصائل في سنار</h3>
+<p>O- و AB- و B- ديل نادرين شديد، لو فصيلتك منهم سجل هسه.</p>
+<label for="tab-donors" class="btn">سجل كمتبرع</label>
+</div>
+</div>
+
+</div>
+
+<footer>دمي سنار ❤️ - من أهل سنار لأهل سنار<br>تبرعك حياة</footer>
+
+<script>
+var donors=[];
+try{donors=JSON.parse(localStorage.getItem('sinnar_donors')||'[]');}catch(e){donors=[];}
+if(donors.length===0){
+donors=[{name:'أحمد محمد علي',place:'سنار - حي القلعة',blood:'O+',phone:'0912345678'},{name:'فاطمة حسن',place:'سنار - السوق الكبير',blood:'A+',phone:'0923456789'},{name:'عبدالله يوسف',place:'سنار - مايرنو',blood:'B+',phone:'0901234567'},{name:'مريم إبراهيم',place:'سنار - الدباغة',blood:'O-',phone:'0911122334'},{name:'خالد عمر',place:'سنار - الرياض',blood:'AB+',phone:'0998765432'}];
+try{localStorage.setItem('sinnar_donors',JSON.stringify(donors));}catch(e){}
+}
+function renderDonors(){
+var el=document.getElementById('donorList');
+document.getElementById('donorCount').innerText=donors.length;
+el.innerHTML=donors.map(function(d){var wa='249'+d.phone.replace(/^0/,'');return '<div class="donor"><b>'+d.name+'</b> <span class="badge">'+d.blood+'</span><br>📍 '+d.place+'<br>📞 '+d.phone+'<br><a href="tel:'+d.phone+'">اتصل الآن 📞</a> <a href="https://wa.me/'+wa+'" style="background:#25D366">واتساب</a></div>';}).join('');
+}if(!name||!place||!phone){alert('أملا كل البيانات لو سمحت');return;}
+donors.unshift({name:name,place:place,blood:blood,phone:phone});
+try{localStorage.setItem('sinnar_donors',JSON.stringify(donors));}catch(e){}
+document.getElementById('donorMsg').innerText='تم حفظ بياناتك بنجاح ❤️ جزاك الله خير';
+document.getElementById('dName').value='';document.getElementById('dPlace').value='';document.getElementById('dPhone').value='';
+renderDonors();
+};
+document.getElementById('findBtn').onclick=function(){
+var blood=document.getElementById('rBlood').value;
+var urgent=document.getElementById('rUrgent').value;
+var date=document.getElementById('rDate').value;
+var note=document.getElementById('rNote').value;
+var found=donors.filter(function(d){return d.blood===blood;});
+var box=document.getElementById('requestResult');
+var html='<div class="card urgent"><h3>نتيجة البحث: فصيلة '+blood+'</h3><p><b>الحالة:</b> '+urgent+'<br><b>اليوم:</b> '+(date||'لم يحدد')+'<br><b>المكان:</b> '+(note||'سنار')+'<br><b>عدد المتبرعين:</b> '+found.length+'</p></div>';
+if(found.length){html+=found.map(function(d){var wa='249'+d.phone.replace(/^0/,'');return '<div class="card donor"><b>'+d.name+'</b> <span class="badge">'+d.blood+'</span><br>📍 '+d.place+'<br>📞 '+d.phone+'<br><a href="tel:'+d.phone+'">اتصل الآن 📞</a> <a href="https://wa.me/'+wa+'" style="background:#25D366;color:#fff;text-decoration:none;padding:8px 14px;border-radius:8px;display:inline-block;margin-top:8px">واتساب</a></div>';}).join('');}
+else{html+='<div class="card"><p style="text-align:center">للأسف مافي متبرعين بالفصيلة دي حاليا.</p></div>';}
+box.innerHTML=html;
+};
+</script>
+</body>
+</html>
+renderDonors();
+document.getElementById('saveDonorBtn').onclick=function(){
+var name=document.getElementById('dName').value.trim();
+var place=document.getElementById('dPlace').value.trim();
+var blood=document.getElementById('dBlood').value;
+var phone=document.getElementById('dPhone').value.trim();
