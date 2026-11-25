@@ -1,144 +1,83 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>دمي سنار - قطرة من دمك .. حياة لغيرك</title>
+<title>فصائل الدم - سنار</title>
 <style>
-*{box-sizing:border-box}body{font-family:sans-serif;background:#fff5f5;margin:0;padding:0;color:#111}
-header{background:#e11d48;color:#fff;text-align:center;padding:18px 10px 12px}
-header h1{margin:0;font-size:30px}header p{margin:4px 0 12px;opacity:.95}
-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:0 10px}
-nav button{border:none;padding:11px 18px;border-radius:10px;font-size:15px;font-weight:bold;cursor:pointer;background:#e11d48;color:#fff}
-nav button.active{background:#111;color:#fff}
-.page{max-width:520px;margin:auto;padding:12px}
-.box{background:#fff;padding:16px;border-radius:16px;box-shadow:0 2px 10px #0001;margin:12px 0}
-h2{color:#e11d48;text-align:center;font-size:24px;margin:10px 0}
-.sub{text-align:center;color:#555;line-height:1.7}
-label{font-weight:bold;display:block;margin-top:12px}
-input,select{width:100%;padding:13px;margin:6px 0;border:1px solid #ddd;border-radius:10px;font-size:15px}
-.btn{width:100%;padding:14px;border:none;border-radius:12px;font-size:17px;font-weight:bold;cursor:pointer;margin-top:10px}
-.btn-red{background:#e11d48;color:#fff}.btn-green{background:#15803d;color:#fff}
-.hadith{background:#fef9c3;padding:16px;border-radius:14px;text-align:center;line-height:1.9}
-.card{background:#fff;padding:13px;border-radius:12px;margin:10px 0;border:1px solid #fee2e2}
-.badge{background:#fee2e2;color:#e11d48;padding:3px 10px;border-radius:20px;font-weight:bold}
-.check{color:#16a34a;font-weight:bold}
-.footer{text-align:center;color:#888;font-size:13px;padding:15px;line-height:1.8}
-.hidden{display:none}
-.hero-img{width:100%;height:180px;border-radius:14px;background:linear-gradient(135deg,#fda4af,#e11d48);display:flex;align-items:center;justify-content:center;font-size:70px}
-.fasail{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.fasail div{background:#fff;padding:14px;border-radius:12px;text-align:center;border:1px solid #fee2e2}
+*{box-sizing:border-box;font-family:Tahoma,Arial}
+body{margin:0;background:#fff5f5}
+header{background:#e11d48;color:#fff;text-align:center;padding:16px;font-size:20px;font-weight:bold}
+.wrap{max-width:480px;margin:auto;padding:12px}
+.card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 12px #0001;margin-bottom:16px}
+h2{text-align:center;color:#e11d48}
+p.sub{text-align:center;color:#666;font-size:13px}
+label{display:block;font-weight:bold;margin:14px 0 6px}
+input,select{width:100%;padding:13px;border:1px solid #eee;background:#f8f8f8;border-radius:10px;font-size:15px}
+button.main{width:100%;background:#e11d48;color:#fff;border:none;padding:15px;border-radius:10px;font-size:17px;font-weight:bold;margin-top:18px}
+.item{background:#fff;border:1px solid #ffe4e6;border-radius:12px;padding:12px;margin:8px 0;display:flex;justify-content:space-between;align-items:center}
+.badge{background:#ffe4e6;color:#e11d48;padding:6px 12px;border-radius:20px;font-weight:bold}
+.small{color:#666;font-size:12px}
+.call{background:#e11d48;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-size:13px}
 </style>
 </head>
 <body>
-<header>
-<h1>دمي سنار</h1>
-<p>قطرة من دمك .. حياة لغيرك</p>
-<nav>
-<button id="btn-home" class="active" onclick="showPage('home')">الرئيسية</button>
-<button id="btn-donor" onclick="showPage('donor')">سجل كمتبرع</button>
-<button id="btn-req" onclick="showPage('req')">اطلب دم</button>
-<button id="btn-blood" onclick="showPage('blood')">فصائل الدم</button>
-</nav>
-</header>
-<div id="page-home" class="page">
-<div class="box hadith">
-<b>قال رسول الله ﷺ</b><br>
-"من نفس عن مؤمن كربة من كرب الدنيا، نفس الله عنه كربة من كرب يوم القيامة"<br>
-<small>رواه مسلم</small><br><br>
-<b>وقال تعالى:</b><br>
-"ومن أحياها فكأنما أحيا الناس جميعا"
+<header>فصائل الدم</header>
+<div class="wrap">
+<div class="card">
+<h2>اطلب دم</h2><p class="sub">دخل الفصيلة المحتاجها، وحنوريك المتبرعين القريبين منك</p>
+<label>نوع الفصيلة المطلوبة</label><select id="r_blood"><option>O+</option><option>O-</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option></select>
+<label>نوع الحالة</label><select id="r_urgent"><option>مستعجلة جدا - محتاج اليوم</option><option>مستعجلة - خلال يومين</option><option>عادية</option></select>
+<label>محتاج الدم في ياتو يوم؟</label><select id="r_when"><option>اليوم</option><option>بكرة</option><option>بعد بكرة</option></select>
+<label>اسم المريض / المستشفى (اختياري)</label><input id="r_patient" placeholder="مثال: مستشفى سنار التعليمي">
+<label>📞 رقم التواصل</label><input id="r_phone" placeholder="09xxxxxxxxx">
+<label>📱 رقم واتساب (اختياري)</label><input id="r_whats" placeholder="09xxxxxxxxx">
+<button class="main" onclick="sendReq()">🔍 ابحث عن متبرعين</button>
 </div>
-<div class="box">
-<h2>دمك ممكن ينقذ شخص اليوم و كل قطرة حياة</h2>
-<p class="sub">في سنار في كل يوم في مريض محتاج دم، في أم بتنزف، في طفل عندو أنيميا، في زول عامل عملية ومستني متبرع.<br><br>انت ما حتتبرع بدم ساي، انت حتنقذ كربة زول.</p>
-<div class="hero-img">🩸❤️</div>
-<button class="btn btn-red" onclick="showPage('donor')">❤️ سجل كمتبرع الآن</button>
-<button class="btn btn-green" onclick="showPage('req')">محتاج دم؟ اطلب الآن</button>
+<div class="card">
+<h2>سجل كمتبرع</h2><p class="sub">املا بياناتك، ووقت ما زول يحتاج فصيلتك حنلقاك طوالي</p>
+<label>الاسم الكامل</label><input id="d_name" placeholder="مثال: محمد أحمد">
+<label>مكان السكن في سنار</label><input id="d_place" placeholder="مثال: سنار - حي القلعة">
+<label>نوع الفصيلة</label><select id="d_blood"><option>O+</option><option>O-</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option></select>
+<label>رقم الهاتف - واتساب</label><input id="d_phone" placeholder="09xxxxxxxxx">
+<button class="main" onclick="sendDonor()">💗 حفظ بياناتي كمتبرع</button>
 </div>
-<div class="box">
-<h2>ليه تتبرع؟</h2>
-<p><span class="check">✅</span> صدقة جارية وأجر عظيم</p>
-<p><span class="check">✅</span> بتجدد دمك وبتنشط جسمك</p>
-<p><span class="check">✅</span> بتساعد أهلك وناس سنار وقت الحوجة</p>
-<p><span class="check">✅</span> تبرع واحد ممكن ينقذ 3 أشخاص</p>
+<h3 style="text-align:center;color:#e11d48">المتبرعين: <span id="cDonors">0</span> | الطلبات: <span id="cReqs">0</span></h3>
+<div id="listDonors"></div><div id="listReqs"></div>
 </div>
-</div>
-<div id="page-donor" class="page hidden">
-<div class="box">
-<h2>سجل كمتبرع</h2>
-<p class="sub">املا بياناتك، ووقت ما زول يحتاج فصيلتك حنلقاك طوالي</p>
-<label>الاسم الكامل</label>
-<input id="dName" placeholder="مثال: محمد أحمد">
-<label>مكان السكن في سنار</label>
-<input id="dPlace" placeholder="مثال: سنار - حي القلعة">
-<label>نوع الفصيلة</label>
-<select id="dBlood"><option>O+</option><option>O-</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option></select>
-<label>رقم الهاتف - واتساب</label>
-<input id="dPhone" placeholder="09xxxxxxxxx" type="tel">
-<button class="btn btn-red" id="saveDonorBtn">❤️ حفظ بياناتي كمتبرع</button>
-<p id="donorMsg" class="sub"></p>
-</div>
-<div class="box">
-<h2>المتبرعين المسجلين: <span id="donorsCount">0</span></h2>
-<input id="searchDonor" placeholder="🔍 ابحث عن متبرع ..." oninput="renderDonors()">
-<select id="filterBlood" onchange="renderDonors()"><option value="">كل الفصائل</option><option>O+</option><option>O-</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option></select>
-<div id="donorsList"><p class="sub">جاري تحميل المتبرعين...</p></div>
-</div>
-</div>
-<div id="page-req" class="page hidden">
-<div class="box">
-<h2>اطلب دم</h2>
-<p class="sub">دخل الفصيلة المحتاجها، وحنوريك المتبرعين القريبين منك</p>
-<label>نوع الفصيلة المطلوبة</label>
-<select id="rBlood"><option>O+</option><option>O-</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option></select>
-<label>نوع الحالة</label>
-<select id="rUrgent"><option>مستعجلة جدا - محتاج اليوم</option><option>مستعجلة - محتاج بكرة</option><option>عادية - خلال يومين</option></select>
-<label>محتاج الدم في ياتو يوم؟</label>
-<input id="rWhen" type="date">
-<label>اسم المريض / المستشفى (اختياري)</label>
-<input id="rPatient" placeholder="مثال: مستشفى سنار التعليمي">
-<label>📞 رقم التواصل</label>
-<input id="rPhone" placeholder="09xxxxxxxxx - رقم أهل المريض" type="tel">
-<label>📱 رقم واتساب (اختياري)</label>
-<input id="rWhats" placeholder="09xxxxxxxxx" type="tel">
-<button class="btn btn-red" id="saveReqBtn">🔍 ابحث عن متبرعين</button>
-<p id="reqMsg" class="sub"></p>
-</div>
-<div class="box">
-<h2>المتبرعين المناسبين لفصيلتك: <span id="matchCount">0</span></h2>
-<div id="matchList"></div>
-<h2 style="margin-top:20px">طلبات الدم: <span id="reqCount">0</span></h2>
-<div id="reqList"></div>
-</div>
-</div>
-<div id="page-blood" class="page hidden">
-<div class="box"><h2>فصائل الدم</h2><p class="sub">اعرف فصيلتك بتدي منو وبتستقبل من منو</p>
-<div class="fasail">
-<div><b>O+</b><br><small>يعطي لـ O+ , A+ , B+ , AB+</small></div>
-<div><b>O-</b><br><small>يعطي لكل الفصائل</small></div>
-<div><b>A+</b><br><small>يعطي لـ A+ , AB+</small></div>
-<div><b>A-</b><br><small>يعطي لـ A+ , A- , AB+ , AB-</small></div>
-<div><b>B+</b><br><small>يعطي لـ B+ , AB+</small></div>
-<div><b>B-</b><br><small>يعطي لـ B+ , B- , AB+ , AB-</small></div>
-<div><b>AB+</b><br><small>يستقبل من كل الفصائل</small></div>
-<div><b>AB-</b><br><small>يعطي لـ AB+ , AB-</small></div>
-</div></div>
-</div>
-<div class="footer">دمي سنار - ❤️ من أهل سنار لأهل سنار<br>تبرعك حياة</div>
 <script>
-const API = "https://script.google.com/macros/s/AKfycbyPT3wUT8auF1FJcs7F68swdqjRS0c7qrRkVAXB4y1nUobbs9OJOZK2LtRMdDamkD0E4w/exec";
-let donors = JSON.parse(localStorage.getItem('sinnar_donors')||'[]');
-let reqs = JSON.parse(localStorage.getItem('sinnar_reqs')||'[]');
-function saveLocal(){ localStorage.setItem('sinnar_donors', JSON.stringify(donors)); localStorage.setItem('sinnar_reqs', JSON.stringify(reqs)); }
-function showPage(p){ ['home','donor','req','blood'].forEach(x=>{ document.getElementById('page-'+x).classList.toggle('hidden', x!==p); document.getElementById('btn-'+x).classList.toggle('active', x===p); }); window.scrollTo({top:0,behavior:'smooth'}); }
-function waLink(num){ num=(num||'').replace(/\s/g,''); if(num.startsWith('0')) num='249'+num.slice(1); if(num.startsWith('+')) num=num.slice(1); return 'https://wa.me/'+num; }
-function renderDonors(){ let q=(document.getElementById('searchDonor').value||'').toLowerCase(); let f=document.getElementById('filterBlood').value; let list=document.getElementById('donorsList'); document.getElementById('donorsCount').innerText=donors.length; let filtered=donors.filter(d=>(!f||d.blood===f)&&(d.name+d.place+d.blood).toLowerCase().includes(q)); if(filtered.length===0){list.innerHTML='<p class="sub">لا يوجد متبرعين بعد - سجل انت أول واحد ❤️</p>';return;} list.innerHTML=filtered.map(d=>` <div class="card"><b>❤️ ${d.name}</b> <span class="badge">🩸 ${d.blood}</span><br>📍 ${d.place}<br>📞 ${d.phone}<br><br> <button onclick="window.location.href='tel:${d.phone}'" style="background:#16a34a;color:#fff;border:none;padding:9px 15px;border-radius:8px">📞 اتصل الآن</button> <button onclick="window.open('${waLink(d.phone)}','_blank')" style="background:#25D366;color:#fff;border:none;padding:9px 15px;border-radius:8px">💬 واتساب</button></div>`).join(''); }
-function renderReqs(){ let list=document.getElementById('reqList'); document.getElementById('reqCount').innerText=reqs.length; if(reqs.length===0){list.innerHTML='<p class="sub">لا توجد طلبات دم حالياً</p>';return;} list.innerHTML=reqs.map(r=>` <div class="card"><b>🩸 مطلوب ${r.blood}</b> <span class="badge">${r.urgent}</span><br>👤 ${r.patient||'بدون اسم'}<br>📅 ${r.when||'اليوم'}<br>📞 رقم التواصل: <b>${r.phone}</b><br>📱 واتساب: <b>${r.whats}</b><br><br> <button onclick="window.location.href='tel:${r.phone}'" style="background:#16a34a;color:#fff;border:none;padding:9px 15px;border-radius:8px">📞 اتصل</button> <button onclick="window.open('${waLink(r.whats)}','_blank')" style="background:#25D366;color:#fff;border:none;padding:9px 15px;border-radius:8px">💬 واتساب</button></div>`).join(''); }
-function renderMatches(blood){ let list=document.getElementById('matchList'); let m=donors.filter(d=>d.blood===blood); document.getElementById('matchCount').innerText=m.length; if(m.length===0){list.innerHTML='<p class="sub">ما لقينا متبرع بنفس الفصيلة هسه .. طلبك اتسجل وحيظهر تحت</p>';return;} list.innerHTML=m.map(d=>` <div class="card"><b>❤️ ${d.name}</b> <span class="badge">🩸 ${d.blood}</span><br>📍 ${d.place}<br>📞 ${d.phone}<br><br> <button onclick="window.location.href='tel:${d.phone}'" style="background:#16a34a;color:#fff;border:none;padding:9px 15px;border-radius:8px">📞 اتصل الآن</button> <button onclick="window.open('${waLink(d.phone)}','_blank')" style="background:#25D366;color:#fff;border:none;padding:9px 15px;border-radius:8px">💬 واتساب</button></div>`).join(''); }
-function loadAll(){ renderDonors(); renderReqs(); renderMatches(document.getElementById('rBlood').value); fetch(API+'?type=donors').then(r=>r.text()).then(t=>{ try{ let d=JSON.parse(t); if(d.length>0){ donors=d; saveLocal(); renderDonors(); renderMatches(document.getElementById('rBlood').value); } }catch(e){} }).catch(()=>{}); fetch(API+'?type=reqs').then(r=>r.text()).then(t=>{ try{ let d=JSON.parse(t); if(d.length>0){ reqs=d; saveLocal(); renderReqs(); } }catch(e){} }).catch(()=>{}); }
-document.getElementById('saveDonorBtn').onclick=function(){ var name=document.getElementById('dName').value.trim(); var place=document.getElementById('dPlace').value.trim(); var blood=document.getElementById('dBlood').value; var phone=document.getElementById('dPhone').value.trim(); if(!name||!phone){alert('اكتب الاسم والتلفون');return;} var obj={name:name,place:place,blood:blood,phone:phone}; donors.unshift(obj); saveLocal(); renderDonors(); document.getElementById('donorMsg').innerText='تم الحفظ ✅ وظهر تحت طوالي'; fetch(API,{method:'POST',mode:'no-cors',body:JSON.stringify(obj)}).catch(()=>{}); document.getElementById('dName').value='';document.getElementById('dPlace').value='';document.getElementById('dPhone').value=''; document.getElementById('donorsList').scrollIntoView({behavior:'smooth'}); };
-document.getElementById('saveReqBtn').onclick=function(){ var blood=document.getElementById('rBlood').value; var urgent=document.getElementById('rUrgent').value; var when=document.getElementById('rWhen').value; var patient=document.getElementById('rPatient').value.trim(); var phone=document.getElementById('rPhone').value.trim(); var whats=document.getElementById('rWhats').value.trim()||phone; if(!phone){alert('اكتب رقم التواصل');return;} var obj={type:'req',blood:blood,urgent:urgent,when:when,patient:patient,phone:phone,whats:whats}; reqs.unshift(obj); saveLocal(); renderReqs(); renderMatches(blood); document.getElementById('reqMsg').innerText='تم نشر الطلب ✅ وظهر تحت طوالي'; fetch(API,{method:'POST',mode:'no-cors',body:JSON.stringify(obj)}).catch(()=>{}); document.getElementById('rPatient').value='';document.getElementById('rPhone').value='';document.getElementById('rWhats').value=''; document.getElementById('matchList').scrollIntoView({behavior:'smooth'}); };
+const API = "https://script.google.com/macros/s/AKfycbxM_FB92ppiGjLGGymWAYiTZY0mzSDG8zqP8RyAnh_2OYSQ9EcMGuo58T5F04LSeDBU/exec";
+async function loadAll(){
+  try{
+    let d = await fetch(API+"?type=donors").then(r=>r.json());
+    let r = await fetch(API+"?type=reqs").then(r=>r.json());
+    if(d.length) localStorage.setItem("donors", JSON.stringify(d));
+    if(r.length) localStorage.setItem("reqs", JSON.stringify(r));
+  }catch(e){}
+  render();
+}
+function render(){
+  let donors = JSON.parse(localStorage.getItem("donors")||"[]");
+  let reqs = JSON.parse(localStorage.getItem("reqs")||"[]");
+  document.getElementById("cDonors").textContent = donors.length;
+  document.getElementById("cReqs").textContent = reqs.length;
+  document.getElementById("listDonors").innerHTML = donors.map(x=>`<div class="item"><div><b>${x.name}</b><div class="small">${x.place} - ${x.phone}</div></div><div><span class="badge">${x.blood}</span><br><a class="call" href="tel:${x.phone}">اتصل</a></div></div>`).join("");
+  document.getElementById("listReqs").innerHTML = reqs.map(x=>`<div class="item"><div><b>محتاج ${x.blood}</b><div class="small">${x.patient||""} - ${x.when} - ${x.urgent}</div><div class="small">${x.phone}</div></div><a class="call" href="tel:${x.phone}">اتصل</a></div>`).join("");
+}
+async function sendDonor(){
+  let obj = {type:"donor", name:document.getElementById("d_name").value, place:document.getElementById("d_place").value, blood:document.getElementById("d_blood").value, phone:document.getElementById("d_phone").value};
+  if(!obj.name||!obj.phone) return alert("اكتب اسمك ورقمك");
+  let arr = JSON.parse(localStorage.getItem("donors")||"[]"); arr.unshift(obj); localStorage.setItem("donors", JSON.stringify(arr));
+  fetch(API,{method:"POST",mode:"no-cors",body:JSON.stringify(obj)});
+  alert("تم حفظك كمتبرع ❤️"); render();
+}
+async function sendReq(){
+  let obj = {type:"req", blood:document.getElementById("r_blood").value, urgent:document.getElementById("r_urgent").value, when:document.getElementById("r_when").value, patient:document.getElementById("r_patient").value, phone:document.getElementById("r_phone").value, whats:document.getElementById("r_whats").value};
+  if(!obj.phone) return alert("اكتب رقم التواصل");
+  let arr = JSON.parse(localStorage.getItem("reqs")||"[]"); arr.unshift(obj); localStorage.setItem("reqs", JSON.stringify(arr));
+  fetch(API,{method:"POST",mode:"no-cors",body:JSON.stringify(obj)});
+  alert("تم نشر طلبك"); render();
+}
 loadAll();
 </script>
 </body>
